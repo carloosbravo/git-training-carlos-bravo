@@ -13,11 +13,10 @@ public class Main {
         int numeroParticipantes = 10;
 
         for(int i = 0;i<numeroParticipantes;i++){
-            Participante p = new Participante();
+            Participante p = new Participante(i, cuenco);
             participantes.add(p);
+            p.start();
            
-            
-
         }
 
     }

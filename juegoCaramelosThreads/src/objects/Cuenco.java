@@ -9,8 +9,7 @@ public class Cuenco {
 
     }
 
-    public synchronized void cogerCaramelo(){
-
+    public synchronized void cogerCaramelo(Participante p){
         caramelos--;
     }
 }
