@@ -9,14 +9,14 @@ public class Main {
     public static void main(String[] args){
         
         ArrayList <Participante> participantes = new ArrayList<Participante>();
-        // Cuenco cuenco = new Cuenco();
+        Cuenco cuenco = new Cuenco();
         int numeroParticipantes = 10;
 
         for(int i = 0;i<numeroParticipantes;i++){
             Participante p = new Participante();
             participantes.add(p);
+           
             
-
 
         }
 
