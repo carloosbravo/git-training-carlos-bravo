@@ -29,6 +29,15 @@ public class Main {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
+        Participante ganador = participantes.get(0);
+        for (Participante p : participantes) {
+            if (p.getCestaCaramelos() > ganador.getCestaCaramelos()) {
+                ganador = p;
+            }
+        }
+        System.out.println("El ganador es el participante número " + ganador.getIdentificador() +
+                " con " + ganador.getCestaCaramelos() + " caramelos.");
             
            System.out.println("el juego ha terminado");
     }
