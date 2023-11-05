@@ -3,7 +3,7 @@ package objects;
 public class Participante extends Thread {
 
     private int id;
-    private int cestaCaramelos;
+    private int cestaCaramelos = 0;
     private Cuenco cuenco;
 
     public Participante(int id, Cuenco cuenco) {
@@ -13,6 +13,20 @@ public class Participante extends Thread {
     }
 
     public void run() {
+            while (cuenco.cogerCaramelo()) {
+                cestaCaramelos++;
+                 cuenco.cogerCaramelo();
+                 try {
+                    Thread.sleep(100); // Simular tiempo que tarda el participante en tomar un caramelo
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+           
+            System.out.println("El participante numero " +id+"tiene " +cestaCaramelos+" caramelos.");
+
+    }
+    public void tomarCaramelo(){
 
     }
 
